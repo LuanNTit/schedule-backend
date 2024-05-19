@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-gateway" />
+        <module name="microservice-exam-scheudle" />
+        <module name="microservice-account-management" />
+      </profile>
+      <profile name="Annotation profile for authentication-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.6.0.Beta1/mapstruct-processor-1.6.0.Beta1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.6.0.Beta1/mapstruct-1.6.0.Beta1.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
+        <module name="authentication-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="microservice-authentication" target="17" />
+      <module name="microservice-lecturer" target="17" />
+      <module name="microservice-student" target="17" />
+      <module name="microservice1" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="authentication-service" options="-parameters" />
+      <module name="microservice-account-management" options="-parameters" />
+      <module name="microservice-authentication" options="-parameters" />
+      <module name="microservice-exam-scheudle" options="-parameters" />
+      <module name="microservice-gateway" options="-parameters" />
+      <module name="microservice-lecturer" options="-parameters" />
+      <module name="microservice-student" options="-parameters" />
+      <module name="microservice1" options="-parameters" />
+    </option>
+  </component>
+</project>
